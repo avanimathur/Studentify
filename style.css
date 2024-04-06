@@ -22,7 +22,7 @@ html,body{
 .header{
     overflow: hidden;
     width: 100%;
-    height: 7rem;
+    height: 5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,8 +31,37 @@ html,body{
 
 .logo {
     
-    width: 100px; 
+    width: 80px; 
     height: auto; 
+}
+
+.Hi {
+    border-radius: 50%;
+    margin: auto;
+    border-style: groove;
+    display: block;
+    opacity: 0; 
+    transition: opacity 1s ease; 
+}
+
+.Hi.loaded {
+    opacity: 1; 
+}
+
+.Hi:hover{
+    opacity: 0.5;
+}
+.message{
+    text-align: center;
+    text-emphasis: none;
+}
+.message:hover{
+    text-decoration: underline;
+    text-shadow: grey;
+    transform: scale(1.1);
+}
+.p{
+    
 }
 
 .logo2 {

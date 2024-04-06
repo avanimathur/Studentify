@@ -242,3 +242,33 @@ li a,a:visited{
         display: flex;
     }
 }
+
+.cta-button {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ff8533;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+}
+
+.footer-info {
+    margin-top: 20px;
+}
+
+.footer-info p {
+    margin: 5px 0;
+}

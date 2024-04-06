@@ -10,48 +10,48 @@
     <script src="/navigateToPages/scriptDashboard.js"></script>
     <script src="/Chatbot/chat.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 </head>
 
 <body>
 
     <header class="header">
-        <img src="/img/logo.jpg" alt="" class="logo">
+        <img src="/img/logo.jpg" alt="Logo" class="logo">
         <div class="search-bar">
             <input type="text" placeholder="Search..." class="search-input">
             <button class="search-button"><i class="fas fa-search"></i></button>
         </div>
         <nav class="navbar">
             <ul class="navbar-list">
-                <li><a href="/index.html">Home</a></li>
-                <!-- <li><a href="/navigateToPages/dashboard.html">Dashboard</a></li> -->
-                <li><a href="/navigateToPages/services.html">Courses</a></li>
+                <li><a href="/index.html" class="active">Home</a></li>
+                <li><a href="#">Profile</a></li>
                 <li><a href="#">Student</a></li>
                 <li><a href="/navigateToPages/contact.html">Contact Us</a></li>
             </ul>
         </nav>
 
+        <a href="/navigateToPages/services.html" class="cta-button">Explore Courses</a>
+
         <div class="Authenticate">
-            <button class="sign-up" onclick="/navigateToPages/dashboard.html">Sign-Up</button>
+            <button class="sign-up">Sign-Up</button>
             <button class="log-in">Log-In</button>
         </div>
 
-        <div class="mobile-btn" id="mobile-btn">
-            <i class="fa-solid fa-bars"></i>
-            <i class="fa-solid fa-xmark"></i>
-        </div>
     </header>
-    
 
     <footer class="footer">
-        <img src="/img/logo.jpg" alt="" class="logo2">
+        <img src="/img/logo.jpg" alt="Logo" class="logo2">
         <div class="follow-us">
             <div class="icons"><a href="#"><i class="fa-brands fa-facebook"></i></a></div>
             <div class="icons"><a href="#"><i class="fa-brands fa-square-instagram"></i></a></div>
             <div class="icons"><a href="#"><i class="fa-brands fa-youtube"></i></a></div>
             <div class="icons"><a href="#"><i class="fa-brands fa-x-twitter"></i></a></div>
         </div>
-        <div class="copyright">&#169 2024 STUDENT</div>
+        <div class="footer-info">
+            <p>Contact: info@example.com</p>
+            <p>Phone: +1234567890</p>
+            <p>Address: 123 Street, City, Country</p>
+        </div>
+        <div class="copyright">&#169; 2024 STUDENT</div>
     </footer>
 
     <button class="chatbot-toggler">

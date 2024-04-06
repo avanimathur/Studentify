@@ -8,34 +8,35 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/navigateToPages/styleDashboard.css">
     <link rel="stylesheet" href="/Chatbot/chat.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4102075795183581"
-        crossorigin="anonymous"></script>
+    <script src="/navigateToPages/scriptDashboard.js" defer></script>
     <script src="/Chatbot/chat.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
-    <script src="https://kit.fontawesome.com/efed557684.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
 
     <header class="header">
         <img src="/img/logo.jpg" alt="" class="logo">
-        <nav class="navbar">
-            <ul class="navbar-list">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/navigateToPages/dashboard.html">Dashboard</a></li>
-                <li><a href="/navigateToPages/services.html">Courses</a></li>
-                <li><a href="#">Calm zone</a></li>
-                <li><a href="/navigateToPages/contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
         <div class="search-bar">
             <input type="text" placeholder="Search..." class="search-input">
             <button class="search-button"><i class="fas fa-search"></i></button>
         </div>
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li><a href="/index.html">Home</a></li>
+                <!-- <li><a href="/navigateToPages/dashboard.html">Dashboard</a></li> -->
+                <li><a href="/navigateToPages/services.html">Courses</a></li>
+                <li><a href="#">Student</a></li>
+                <li><a href="/navigateToPages/contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="Authenticate">
+            <button class="sign-up" onclick="/navigateToPages/dashboard.html">Sign-Up</button>
+            <button class="log-in">Log-In</button>
+        </div>
+
         <div class="mobile-btn" id="mobile-btn">
             <i class="fa-solid fa-bars"></i>
             <i class="fa-solid fa-xmark"></i>

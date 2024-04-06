@@ -132,7 +132,16 @@ li a,a:visited{
     background-color: lightgreen; 
 }
 
+.sign-up , .log-in{
+    background-color: lightgrey;
+    border-radius: 20px;
+    padding: 8px;
+    border-color: lightyellow;
+}
 
+.sign-up:hover , .log-in:hover{
+    background-color: lightblue;
+}
 
 .footer{
     overflow-x: hidden; 

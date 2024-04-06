@@ -61,7 +61,7 @@ input, select{
     padding: 18px 15px;
 }
 option{
-    background: lightblue;
+    background: lightgrey;
 }
 form p{
     text-align: left;

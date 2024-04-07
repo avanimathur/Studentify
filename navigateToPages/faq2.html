@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;"><head>
+
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WCQT3YNG8C"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+               gtag('js', new Date());
+               gtag('config', 'G-WCQT3YNG8C');
+    </script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<title class="notranslate">STUDENTIFY</title>
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/Chatbot/chat.css">
+<script href="/Chatbot/chat.js" defer></script>
+<link rel="icon" href="https://storage.googleapis.com/swayam2_central/assets/img/favicon.ico">
+<link rel="apple-touch-icon" sizes="152x152" href="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/ico/152x152.png">
+<link rel="apple-touch-icon" sizes="167x167" href="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/ico/167x167.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/ico/180x180.png">
+<link rel="icon" type="image/png" sizes="196x196" href="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/ico/196x196.png">
+<link href="https://storage.googleapis.com/swayam2_central/assets/css/swayam_css/bootstrap.min.css" rel="stylesheet">
+<link href="https://storage.googleapis.com/swayam2_central/assets/css/swayam_css/main.css" rel="stylesheet">
+<link href="https://storage.googleapis.com/swayam2_central/assets/css/swayam_css/header_css.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+.goog-te-combo {
+	display: inline-block;
+	position: relative;
+	width: 47px;
+	/* Set the width of your image */
+	height: 22px;
+	/* Set the height of your image */
+	background: url("https://storage.googleapis.com/swayam2_central/assets/img/languages.svg");
+	/* Set the image path */
+	background-size: cover;
+	/* Adjust image sizing */
+	cursor: pointer;
+	border: unset;
+	background-color: transparent;
+    color: transparent;
+}
+</style>
+
+<!-- STUDENTIFYJS -->
+<script src="https://storage.googleapis.com/swayam2_central/assets/js/swayam_js/jquery.js"></script>
+<script src="https://storage.googleapis.com/swayam2_central/assets/js/swayam_js/bootstrap.min.js"></script>
+<script type="text/javascript">
+var idleTime = 0;
+var current_user_email = 'None';
+$(document).ready(function () {
+    //home page modal triggered here based on session storage check
+    let popUpFlagVal = sessionStorage.getItem("popUpFlag");
+    if(popUpFlagVal !== "true" || popUpFlagVal === "undefined"){
+     
+        //     $("#homePageModal").modal({
+        //     show: true,
+        //     backdrop: 'static',
+        //     keyboard: false
+        // });
+     
+ 
+        sessionStorage.setItem("popUpFlag", "true");
+    }
+    //Increment the idle time counter every minute.
+    var currentUserEmail = 'None'
+
+    if (currentUserEmail != "None"){
+       var idleInterval = setInterval(timerIncrement, 60000); // 1 minute
+    }
+
+
+    //Zero the idle timer on mouse movement.
+    $(this).mousemove(function (e) {
+        idleTime = 0;
+    });
+    $(this).keypress(function (e) {
+        idleTime = 0;
+    });
+});
+
+function timerIncrement() {
+    idleTime = idleTime + 1;
+
+    if (idleTime > 119) { // 120 minutes
+        window.location.replace("https://swayamopenid.b2clogin.com/swayamopenid.onmicrosoft.com/B2C_1_swayam2/oauth2/v2.0/logout?post_logout_redirect_uri=https://swayam.gov.in/wso_logout");
+    }
+}
+</script>
+<script type="text/javascript" async="" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><link type="text/css" rel="stylesheet" charset="UTF-8" href="https://www.gstatic.com/_/translate_http/_/ss/k=translate_http.tr.qhDXWpKopYk.L.W.O/am=wA/d=0/rs=AN8SPfq5gedF4FIOWZgYyMCNZA5tU966ig/m=el_main_css"><script type="text/javascript" charset="UTF-8" src="https://translate.googleapis.com/_/translate_http/_/js/k=translate_http.tr.en_GB.KnPaCmZr-Zk.O/am=AAQ/d=1/exm=el_conf/ed=1/rs=AN8SPfo_UhjdvaIde2Owa0F4XOvjRJKhxg/m=el_main"></script></head>
+<body class="homepage HeaderMargin" style="position: relative; min-height: 100%; top: 0px;">
+    <a href="/index.html">
+        <img src="/img/logo.jpg" alt="Logo" class="logo">
+    </a>
+    <div class="search-bar">
+        <input type="text" placeholder="Search..." class="search-input">
+        <button class="search-button"><i class="fas fa-search"></i></button>
+    </div>
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li><a href="#" class="active">About Us</a></li>
+            <li><a href="#">STUDENT Profile</a></li>
+            <li><a href="/navigateToPages/contact.html">CALENDAR</a></li>
+            <li><a href="/navigateToPages/faq2.html">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <a href="/navigateToPages/services.html" class="cta-button">Explore Courses</a>
+
+    <div class="Authenticate">
+        <button class="sign-up">Sign-Up</button>
+        <button class="log-in">Log-In</button>
+    </div>
+
+</header>
+
+<script>
+function redirect_confirmation(title, text, link) {
+    $("#popup-title").text(title);
+    $("#popup-question").text(text);
+    $("#popup-link").attr('href', link);
+    return false; // To avoid refreshing page
+}
+
+function close_modal() {
+    $(".close").click();
+}
+</script>
+
+<div id="back-to-top" style="bottom: 20px;right: 20px;position: fixed;display: none;z-index: 1" onclick="topFunction()">
+  <img src="https://storage.googleapis.com/swayam2_central/assets/img/Up_arrow_48.png">
+</div>
+
+<script>
+  function redirectToCatalogWithSearchQuery(event) {
+      // Proceed only if user clicks on Search icon
+      if (event.type == "click") {
+          document.location = "/explorer?searchText=" + document.getElementById('header-search-query').value;
+      }
+  }
+  backtotop = document.getElementById("back-to-top");
+
+  window.onscroll = function() {
+      scrollFunction()
+  };
+
+  function scrollFunction() {
+      let threshold_pixel_value = 100;
+      if (document.body.scrollTop > threshold_pixel_value || document.documentElement.scrollTop > threshold_pixel_value) {
+          backtotop.style.display = "block";
+      } else {
+          backtotop.style.display = "none";
+      }
+  }
+
+  function topFunction() {
+      $(window).scrollTop(0);
+  }
+
+  function toggle_dropdownmenu(ul_id){
+     const menuHeight = $('#' + ul_id).outerHeight();
+     $('#' + ul_id).toggle();
+     $('#' + ul_id).css('min-height', menuHeight);
+  }
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="container faq-container notranslate">
+    
+    <div class="row">
+        <div class="col-md-3 col-sm-3 col-sm-12">
+            
+            <li class="General menu active" id="menu1" onclick="changeSection('General')">General
+            </li>
+            
+            <li class="Courses menu" id="menu2" onclick="changeSection('Courses')">Courses
+            </li>
+
+            <li class="ALERT menu" id="menu6" onclick="changeSection('ALERT')">ALERT
+            </li>
+            
+        </div>
+        <div class="col-md-9 col-sm-9 col-sm-12 faq-qa-ans">
+            
+            <div id="faq-content-General" class="mensection" style="display: block;">
+                <div class="category-heading">General</div>
+                <br>
+                
+                <div class="question">
+                    <div>What is STUDENTIFY?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>STUDENTIFYstands for Study Webs of Active-learning for Young Aspiring Minds. STUDENTIFYis an indigenous developed platform, initiated by Government of India, which is instrumental for self-actualisation providing opportunities for a life-long learning.</p>
+                </div>
+                
+                <div class="question">
+                    <div>For which standard &amp; discipline, the Courses shall be delivered through STUDENTIFY?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>The STUDENTIFYprovides all the courses from 9th class to PG Level.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Can any person in the world register a Course on STUDENTIFY?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Yes, any person in the world can register a Course on SWAYAM.</p>
+                </div>
+                
+                <div class="question">
+                    <div>What is the eligibility criterion for joining an online course?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>There is no specific eligibility / age criterion for any of the online courses. The faculty of a particular course may recommend some basic knowledge of certain topics for a person to fully grasp the contents of a course. Anyone may join an online course and register for the exam.</p>
+                </div>
+                
+                <div class="question">
+                    <div>What Courses are planned &amp; who can deliver the MOOCs on STUDENTIFY?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>You can choose from hundreds of courses, that is taught at the university / college / school level. More than 1,000 teachers and lecturers from across the Country have participated in preparing these courses.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Who shall produce &amp; deliver the MOOCs on STUDENTIFY?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>MHRD has appointed nine National Coordinators viz UGC, NPTEL, CEC, IGNOU, NCERT, NIOS, IIMB,
+NITTTR &amp; AICTE which have been assigned a specific sector for preparation of online courses for SWAYAM.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Is there a fee to join/register for a STUDENTIFYcourse?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>The courses delivered through STUDENTIFYare available free of cost to the learners, but students who need certificate will write a proctored exam which has a nominal fee</p>
+                </div>
+                
+                <div class="question">
+                    <div>Are Skill based courses also to be covered under STUDENTIFY?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>The STUDENTIFYshall also cover Skill based courses.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Are STUDENTIFYcourses recognized by employers or educational institutions?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>STUDENTIFYcourses are recognized by the Government of India and participating institutions. However, recognition may vary depending on the institution or organization. It's recommended to check with relevant authorities for specific recognition details.</p>
+                </div>
+                
+                <div class="question">
+                    <div>How can I register on STUDENTIFY?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Go to the official website and click "Register as Student" to register yourself.</p>
+                </div>
+                
+                <div class="question">
+                    <div>What are the required info. for registering on STUDENTIFY?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Your Name, Email ID are essential information for registration process on STUDENTIFYplatform.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Can I signup using microsoft or google login?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Yes you can.</p>
+                </div>
+                
+                <div class="question">
+                    <div>How would I know that my account is verified, Will I receive an email notification?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Yes, you will be receiving email notification from support@swayam.gov.in</p>
+                </div>
+                
+                <div class="question">
+                    <div>I forgot my login password. Is there any provision to reset my password?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Click "forgot password" option and follow steps to retrieve/recreate your password.</p>
+                </div>
+                
+                <div class="question">
+                    <div>How can I search a course on STUDENTIFY?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>You can search with your own keywords or you can choose categories listed on Swayam.gov.in</p>
+                </div>
+                
+                <div class="question">
+                    <div>How can I select a course on STUDENTIFY?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>After you have search a category or a keyword, a list of courses will appear. You may click the course-title of the course that you find suitable, detailed course-page of that course would appear.</p>
+                </div>
+                
+                <div class="question">
+                    <div>How can I know which course will be suitable to enroll into?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Go through the Course-page and check the eligibility and other information.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Can I search category wise courses on STUDENTIFY?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Yes, you can.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Can I search a course on a specific topic?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Yes, you can search a course on a specific topic.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Can I search and find a course from any specific University?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>You can go to the specific University/Institute page and search the courses being offered by those Institute/University.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Where can a learner find, course syllabus &amp; details of course credit?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>The learner will be able to find the syllabus &amp; course credit details on the course detail page.</p>
+                </div>
+                
+                <div class="question">
+                    <div>How to find out the eligibilities for the courses?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>In the Course-page, all the details of the eligibility are mentioned.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Can I enroll into multiple courses once I got myself registered with STUDENTIFYportal?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Yes, you can enroll in multiple course (MOOCs) on STUDENTIFYafter registration.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Is there any time limit or deadline to the courses where I am enrolled?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>For participation in a course which is a scheduled course, students cannot enroll after the course is started. For a Self-paced course there is no deadline.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Can I submit my assignments online?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Yes, It can be done!</p>
+                </div>
+                
+                <div class="question">
+                    <div>Do I need a dedicated internet connection? or I can consume course contents offline once logged in?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>You would need an active internet connection to consume course contents.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Can I also download my content for offline access?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Yes provided faculty has given the download access to the students.</p>
+                </div>
+                
+                <div class="question">
+                    <div>How can I ask a question to the faculty?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>You can find the option "Q&amp;A" on the course page to post your course related queries.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Will it be visible to all the students enrolled in that course?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Yes, Since it is an open forum.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Will I receive notification emails when new post is added?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Yes, only if you have subscribed to the discussion forum.</p>
+                </div>
+                
+            </div>
+            
+            <div id="faq-content-Courses" class="mensection" style="display: none;">
+                <div class="category-heading">Courses</div>
+                <br>
+                
+                <div class="question">
+                    <div>What are credit courses?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Credit course means a course which follows an academic curriculum taught for at least one Semester as a part of a Subject/Programme and for which credit transfers are permissible under the Regulations/ Notifications issued by UGC &amp; AICTE. After conduct of the external examination and completion of the internal assessment evaluation, the National Coordinator/Host institution shall award marks/grade as per the evaluation scheme announced. On successful completion of each course, the National Coordinator/Host institution offering the Online Course would issue the certificate, along with the number of credits and grades, through which the student can get credits transferred into his/her marks certificate issued by his/ her parent institution.</p>
+                </div>
+                
+                <div class="question">
+                    <div>What are no-credit (Selfpaced) courses?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Non-Credit Course shall include courses like awareness programme, continuing education programme or training of specific skill set as independent course, which are not part of any set curriculum. No certificate will be issued for completion of Self paced courses.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Where do I get information about up-coming certification courses?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>The details will be available at <a href="https://swayam.gov.in/" target="_blank"> STUDENTIFY</a> when the enrolments begin.</p>
+                </div>
+                
+                <div class="question">
+                    <div>I just came to know that an online course that I wanted to join has concluded its run. Is there any chance of this course being offered again?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Courses will be available based on a specific semester based on the availability of the course instructor who is offering the course. All courses will not be available in all the semesters. </p>
+                </div>
+                
+                <div class="question">
+                    <div>If I were to suggest a particular subject/topic for an STUDENTIFYonline course, will you take that into consideration?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Suggestions are always welcome. The respective National corodinator will decide on this.</p>
+                </div>
+                
+                <div class="question">
+                    <div>How will I come to know about assignments and deadlines?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Each assignment page will have the due date and time for submission.</p>
+                </div>
+                
+                <div class="question">
+                    <div>How do I find out my score in each assignment?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>You will be able to see the scores of the submitted assignments on the progress page once the due date of submission is over.</p>
+                </div>
+                
+                <div class="question">
+                    <div>I live outside India. Can I take the certification exam?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>You need to write to the respective National coordintor regarding this. </p>
+                </div>
+                
+                <div class="question">
+                    <div>What do I have to do to get a certificate?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>One has to join the course, submit weekly Assignments, register+pay for exams &amp; finally write the in-person-at-centre proctored exams.
+The pass criteria also depends on the courses.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Will I get credit equivalents for STUDENTIFYcertification courses?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>If you are studying in any college, you need to check with your college. It is upto your college/university how much credit should be given for each course.</p>
+                </div>
+                
+            </div>
+            
+            <div id="faq-content-Exam" class="mensection" style="display: none;">
+                <div class="category-heading">Exam</div>
+                <br>
+                
+                <div class="question">
+                    <div>Since it is an online exam, can I take the exam from home on any day/date</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>If you are taking an exam in India, there is no option to take the exam online from any other place other than from the designated exam centre. Also you cannot change the session and date mentioned in the hall ticket. </p>
+                </div>
+                
+                <div class="question">
+                    <div>Due to other commitments, I cannot appear for the exam on the date you had prescribed. Can I take the same exam on another date?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>No you should take the exam in the alloted exam date</p>
+                </div>
+                
+                <div class="question">
+                    <div>How will I get my Admit Card?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>You will be notified via email once the admit Card is made available as per the schedule communicated through the website. Candidates need to check the Admit Card carefully for all particulars e.g Roll No. Name, Subject, Date of Birth, Examination Centre Name, City, and Category, etc.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Where can I get the details of test centre? </div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>The name of test centre along with the address will be
+mentioned in admit card.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Can I change my test city after receiving Admit Card?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>No, you will not be allowed to change your test city once admit card has been issued.
+While applying, candidates have to select any three cities of their choice. Efforts will be made to allot city of examination to the candidates in order of the choice opted by them in their application form. Please select your preferred choices carefully. However, the exam partner reserves the right to change the city based on administrative exigencies.</p>
+                </div>
+                
+                <div class="question">
+                    <div>What is the reporting time at the centre? </div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Candidates are advised to report as per staggered entry time slot mentioned on their respective Admit Card in order to avoid crowding during verification of the admit cards, registration, frisking, etc</p>
+                </div>
+                
+                <div class="question">
+                    <div>What documents do I need to carry to the examination centre on the day of examination? 
+
+What are the things allowed to be carried or not to be carried to the examination centre? </div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Candidates MUST bring the following documents on the day of examination at the test centre. 
+I. Admit Card  (a clear printout on A4 size paper) 
+II. Any one of the original and valid Photo Identification Proof issued by the government – PAN card/Driving License/Voter ID/12th Class Board Admit or Registration card/ Passport/ Aadhaar Card (With photograph)/ EAadhaar/ Ration Card./ Aadhaar Enrolment No. with Photo. All other ID/Photocopies of IDs even if attested/scanned photo of IDs in mobile phone will NOT be considered as valid ID Proof. 
+Note: Candidate will not be allowed to take personal items such as mobile phones, digital/analogue watches, food items, study material, lockets, bags, electronic gadgets or any other prohibited items into the testing room. You are advised not to bring these to the test centre</p>
+                </div>
+                
+                <div class="question">
+                    <div>What precaution should I take while carrying document? </div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>The name on the photo identification must match with the name as shown on the Admit Card. If the name has been changed due to events such as marriage, candidate must show the relevant document like Marriage Certificate / Divorce / Decree / Legal Name Change Document at the time of examination.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Should I carry a paper to the exam hall for doing some rough work? </div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>No. Blank Sheets for doing rough work/calculations will be provided to the candidates at the exam centre. All calculations/rough work are to be done only in the Blank Sheets provided at the Centre in the Examination Room/Hall. On completion of the test, candidates must drop these rough sheets along with Admit card and Undertaking in the designated box, as instructed by the invigilator on duty.</p>
+                </div>
+                
+                <div class="question">
+                    <div>How do I answer questions in the computer-based mode?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Detailed guidelines on the Procedure for appearing in computer-based tests are given in the Information Bulletin. You may go through them.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Can I take the exam from any computer?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>No, a candidate will have to appear for the exam on a computer? pre-assigned workstation of the test center allocated to
+him/her.</p>
+                </div>
+                
+                <div class="question">
+                    <div>Can I move back and forth between the questions?</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p> Yes, candidates will have the option to navigate between the questions by following instructions available on the User Interface. They may change even answer options, anytime before they enter submit button.</p>
+                </div>
+                
+                <div class="question">
+                    <div>What if I could not appear in the examination on scheduled date? </div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>No candidate will be allowed to appear at the examination centre/date/timings other than that allotted to them in their Admit card. 
+Important: For those who are unable to appear on the scheduled date of test for any reason, retest shall not be held under any circumstances.</p>
+                </div>
+                
+            </div>
+           
+            <div id="faq-content-ALERT" class="mensection" style="display: none;">
+                <div class="category-heading">ALERT</div>
+                <br>
+                
+                <div class="question">
+                    <div>Recommendation</div>
+                    <i class="fa arrow-custom fa-angle-down"></i>
+                </div>
+                <div class="answer">
+                    <p>Please ensure to review the respective course page for comprehensive details and direct any inquiries to the relevant national coordinator responsible for offering the course.</p>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
+<style>
+    .question {
+        margin-top:10px;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        cursor: pointer;
+        display:flex;
+        justify-content:space-between;
+        border-bottom: 1px solid #4c6c85;
+    }
+    .answer {
+        display: none;
+    }
+    .faq-container li{
+        list-style-type:disc;
+    }
+    .arrow-custom {
+        display: inline-block;
+        transition: transform 0.5s ease;
+    }
+
+    .close-arrow {
+        transform: translateY(2px) rotate(-180deg);
+    }
+    .question-change{
+        color: #089ff4;
+        border-bottom: 1px solid #2491ce;
+    }
+    .answer p {
+        margin-top: 10px;
+        padding: 10px;
+        color: black;
+        background-color: #f1f7ff;
+    }
+    .answer p a{
+        text-decoration:underline;
+    }
+    .menu {
+        color: black;
+        margin:20px 20px 20px 0px;
+        padding: 5px 10px 5px 10px ;
+        font-size:20px;
+        border-radius: 5px;
+    }
+    .menu:hover {
+        background-color: #e0e0e0;
+        cursor: pointer;
+        width: fit-content;
+     }
+    .active{
+        background-color: #e7eeef;
+        width: fit-content;
+    }
+    .faq-qa-ans{
+        font-size:16px;
+        font-weight: medium;
+        line-height:20px;
+        border-left:2px solid #ccc;
+    }
+    .faq-heading{
+        margin-top: 32px;
+	    margin-bottom: 2px;
+	    font-family: Roboto-Light;
+	    font-size: 20px;
+    }
+    .category-heading{
+        font-size: 32px;
+        width: fit-content;
+        border-bottom: 3px solid black;
+        padding-bottom:10px;
+        font-weight:bold;
+    }
+
+</style>
+<script>
+    $(document).ready(function() {
+     $("#menu1").click();
+     $('.question').click(function() {
+       $(this).toggleClass('question-change');
+       $(this).find('.arrow-custom').toggleClass('close-arrow');
+       $(this).next('.answer').slideToggle();
+     });
+    });
+
+    function changeSection(category){
+       $('.mensection').hide();
+       $('#faq-content-'+category).show();
+       $('.menu').removeClass('active');
+       $('.'+category).addClass('active');
+    }
+</script>
+
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+
+$(document).ready(function() {
+
+  $(".CheckboxContainer .container").click(function(){
+
+      $("input[type='checkbox']").click(function(e){
+
+          $div = $(this).parent();
+          text = $div[0].firstChild.nodeValue;
+          id_text = text.replace(/\s+/g, "");
+          id_text = id_text.replace("&", "_");
+
+          if($(this).prop("checked") == true){
+            $(".sf-filtertags ul").prepend("<li>"+text+"<a href='#' name='"+text+"' id='"+id_text+"' onclick='removeTagAndUncheck(this.id,this.name)'> X </a></li>");
+          }
+          else{
+            $("#"+id_text).parent().remove();
+          }
+
+          clearAllShowHide();
+          e.stopImmediatePropagation();
+        });
+    });
+
+    $('.dropdown-submenu a.submenu').on("click", function(e){
+        $.each($(".dropdown-submenu div.dropdown-menu"), function(){
+            if($(this).is(":visible")) {
+                if( $( "div" ).index( $(this).parent() ) != $( "div" ).index( $(e.target).next('div.dropdown-menu').parent() ) ){
+                    $(this).css("display","none");
+                    $(this).parent().find("i").removeClass("fa-angle-right");
+                    $(this).parent().find("i").addClass("fa-angle-down");
+                }
+            }
+        });
+
+        $(e.target).next('div').toggle();
+
+        if(($(e.target).next('div')).is( ":visible" )){
+            $(e.target).find("i").removeClass("fa-angle-down");
+            $(e.target).find("i").addClass("fa-angle-right");
+        }
+        else{
+            $(e.target).find("i").removeClass("fa-angle-right");
+            $(e.target).find("i").addClass("fa-angle-down");
+        }
+        e.stopPropagation();
+        e.preventDefault();
+    });
+
+    $(".dropdown").on("show.bs.dropdown", function(event){
+        $( event.target).find("div.dropdown-menu").css("display","table") ;
+        $(event.target).find("i").removeClass("fa-angle-right");
+        $(event.target).find("i").addClass("fa-angle-down");
+    });
+    $(".dropdown").on("shown.bs.dropdown", function(){
+        $('.dropdown-submenu a.submenu').next('div').toggle();
+    });
+    $(".dropdown").on("hide.bs.dropdown", function(event){
+        $( event.target).find("div.dropdown-menu").css("display","none") ;
+    });
+});
+
+function clearAllShowHide(){
+  if ( $('.sf-filtertags ul li').length > 2 ) {
+    $("#clearAllTags").css("visibility","visible");
+  }else{
+    $("#clearAllTags").css("visibility","hidden");
+  }
+}
+
+function removeTagAndUncheck(id, name){
+  $("input[name='"+name.trim()+"']:checkbox").prop('checked', false);
+  $("#"+id).parent().remove();
+  clearAllShowHide();
+}
+
+function clearAllTags(){
+  $('.sf-filtertags ul').empty();
+  $('.sf-filtertags ul').prepend('<li id="clearAllTags" style="border:none;visibility: hidden;" onclick="clearAllTags()"><a href="#">Clear All</a></li>');
+  $('input:checkbox').removeAttr('checked');
+  clearAllShowHide();
+}
+
+//Hide Dropdown popover on out-focus
+$(document).on("focusin", function(event){
+    var $trigger = $(".dropdown");
+    if($trigger !== event.target && !$trigger.has(event.target).length){
+        $(".dropdown-menu").slideUp("fast");
+    }
+});
+
+$(window).click(function() {
+    $(".dropdown-menu").slideUp("fast");
+});
+</script>
+
+<script>
+$('a').click(function(){
+    if($(this).text().trim() == 'Show More' ){
+        $(this).html('Show Less <i class="fa fa-chevron-up"></i>');
+    }
+    else if($(this).text().trim() == 'Show Less' ){
+         $(this).html('Show More <i class="fa fa-chevron-down"></i>');
+    }
+});
+</script><div id="goog-gt-tt" class="VIpgJd-yAWNEb-L7lbkb skiptranslate" style="border-radius: 12px; margin: 0 0 0 -23px; padding: 0; font-family: 'Google Sans', Arial, sans-serif;" data-id=""><div id="goog-gt-vt" class="VIpgJd-yAWNEb-hvhgNd"><div class=" VIpgJd-yAWNEb-hvhgNd-l4eHX-i3jM8c"><img src="https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg" width="24" height="24" alt=""></div><div class=" VIpgJd-yAWNEb-hvhgNd-k77Iif-i3jM8c"><div class="VIpgJd-yAWNEb-hvhgNd-IuizWc" dir="ltr">Original text</div><div id="goog-gt-original-text" class="VIpgJd-yAWNEb-nVMfcd-fmcmS VIpgJd-yAWNEb-hvhgNd-axAV1"></div></div><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid ltr"><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid-B7I4Od ltr" dir="ltr"><div class="VIpgJd-yAWNEb-hvhgNd-UTujCb">Rate this translation</div><div class="VIpgJd-yAWNEb-hvhgNd-eO9mKe">Your feedback will be used to help improve Google Translate</div></div><div class="VIpgJd-yAWNEb-hvhgNd-xgov5 ltr"><button id="goog-gt-thumbUpButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Good translation" aria-label="Good translation" aria-pressed="false"><span id="goog-gt-thumbUpIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM7 18H4V9h3v9zm14-7l-3 7H9V8l4.34-4.34L12 9h9v2z"></path></svg></span><span id="goog-gt-thumbUpIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7v13h11c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM5 7H1v13h4V7z"></path></svg></span></button><button id="goog-gt-thumbDownButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Poor translation" aria-label="Poor translation" aria-pressed="false"><span id="goog-gt-thumbDownIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zM17 6h3v9h-3V6zM3 13l3-7h9v10l-4.34 4.34L12 15H3v-2z"></path></svg></span><span id="goog-gt-thumbDownIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zm16 0h4V4h-4v13z"></path></svg></span></button></div></div><div id="goog-gt-votingHiddenPane" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><form id="goog-gt-votingForm" action="//translate.googleapis.com/translate_voting?client=te" method="post" target="votingFrame" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><input type="text" name="sl" id="goog-gt-votingInputSrcLang"><input type="text" name="tl" id="goog-gt-votingInputTrgLang"><input type="text" name="query" id="goog-gt-votingInputSrcText"><input type="text" name="gtrans" id="goog-gt-votingInputTrgText"><input type="text" name="vote" id="goog-gt-votingInputVote"></form><iframe name="votingFrame" frameborder="0"></iframe></div></div></div>
+
+
+
+<div class="VIpgJd-ZVi9od-aZ2wEe-wOHMyf"><div class="VIpgJd-ZVi9od-aZ2wEe-OiiCO"><svg xmlns="http://www.w3.org/2000/svg" class="VIpgJd-ZVi9od-aZ2wEe" width="96px" height="96px" viewBox="0 0 66 66"><circle class="VIpgJd-ZVi9od-aZ2wEe-Jt5cK" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div></body></html>

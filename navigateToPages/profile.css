@@ -1,7 +1,7 @@
 .logged{
     height: 600px;
     padding: 15rem;
-    background-image: url('/img/back.jpg');
+    background-image: url('./img/back.jpg');
 }
 .Authenticate {
     height: 300px;

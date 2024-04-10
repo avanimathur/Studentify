@@ -9,7 +9,7 @@
     width: 95vw;
     margin: auto;
     position: relative;
-    background-image: url('/img/background.jpg'); 
+    background-image: url('./img/background.jpg'); 
 }
 .form-box{
     width: 90%;

@@ -12,6 +12,10 @@ html,body{
     overflow-x: hidden;
 }
 
+.content{
+    background-image: url('/img/back.jpg');
+}
+
 .header{
     overflow: hidden;
     width: 100%;
@@ -43,6 +47,7 @@ html,body{
 
 .Hi:hover{
     opacity: 0.5;
+    width: 300px;
 }
 .message{
     text-align: center;
@@ -53,8 +58,8 @@ html,body{
     text-shadow: grey;
     transform: scale(1.1);
 }
-.p{
-    
+p{
+    color: white;
 }
 
 .logo2 {
@@ -165,7 +170,6 @@ li a,a:visited{
 .sign-up:hover , .log-in:hover{
     background-color: lightblue;
 }
-
 .footer{
     overflow-x: hidden; 
     display: flex;

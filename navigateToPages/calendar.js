@@ -71,7 +71,7 @@ prevNextIcon.forEach((icon) => {
 function showTasksModal(tasksForDate) {
   const modal = document.getElementById("tasksModal");
   const modalContent = modal.querySelector(".modal-content");
-  modalContent.innerHTML = ""; // Clear existing content
+  modalContent.innerHTML = "";
 
   // Create a heading for the modal
   const heading = document.createElement("h2");

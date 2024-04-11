@@ -1,38 +1,70 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const signUpBtn = document.querySelector('.sign-up');
-    signUpBtn.addEventListener('click', function () {
-        window.location.href = "./navigateToPages/dashboard.html";
-    });
+let signupBtn = document.getElementById("signupBtn");
+let signinBtn = document.getElementById("signinBtn");
+let nameField = document.getElementById("nameField");
+let title = document.getElementById("title");
+let identity = document.getElementById("identity");
+let count = 0;
+let count2 = 0;
 
-    const logInBtn = document.querySelector('.log-in');
-    logInBtn.addEventListener('click', function () {
-        window.location.href = "./navigateToPages/dashboard.html";
-    });
-});
-document.addEventListener("DOMContentLoaded", function () {
-    const signUpBtn = document.getElementById("signupBtn");
-    const signInBtn = document.getElementById("signinBtn");
-    const nameInput = document.querySelector('input[type="text"]');
-    const emailInput = document.querySelector('input[type="email"]');
-    const passwordInput = document.querySelector('input[type="password"]');
-    
-    signUpBtn.addEventListener("click", function () {
-        if (validateForm()) {
-            window.location.href = "../navigateToPages/services.html"; // Redirect to services.html for sign-up
-        }
-    });
+signinBtn.onclick = function () {
+    count++;
+    nameField.style.maxHeight = "0";
+    title.innerHTML = "Sign In";
+    signupBtn.classList.add("disable");
+    signinBtn.classList.remove("disable");
 
-    signInBtn.addEventListener("click", function () {
-        if (validateForm()) {
-            window.location.href = "../navigateToPages/services.html"; // Redirect to services.html for sign-in
-        }
-    });
+    console.log("Sign-in button clicked. Count: ", count);
 
-    function validateForm() {
-        if (nameInput.value.trim() === '' || emailInput.value.trim() === '' || passwordInput.value.trim() === '') {
-            alert('Please fill in all required fields.');
-            return false;
+    if (count >= 1 && areAllFieldsFilled()) {
+        let selectedOption = null; // Declare selectedOption outside the if block
+        if (identity != null) {
+            selectedOption = identity.value; // Assign value to selectedOption
         }
-        return true;
+
+        if (selectedOption === "Investor" || selectedOption === "Contributor") {
+            console.log("Redirecting to services.html");
+            window.location.href = "../navigateToPages/services.html";
+        }
     }
+};
+
+signupBtn.onclick = function (event) {
+    event.preventDefault(); // Prevent default form submission behavior
+    count2++;
+    nameField.style.maxHeight = "55px";
+    title.innerHTML = "Sign Up";
+    signupBtn.classList.remove("disable");
+    signinBtn.classList.add("disable");
+    if (count2 >= 1 && areAllFieldsFilled2()) {
+        nameField.style.maxHeight = "0";
+        title.innerHTML = "Sign In";
+        signupBtn.classList.add("disable");
+        signinBtn.classList.remove("disable");
+    }
+};
+
+function areAllFieldsFilled() {
+    let email = document.querySelector('input[type="email"]').value;
+    let password = document.querySelector('input[type="password"]').value;
+    return email.trim() !== "" && password.trim() !== "";
+}
+
+function areAllFieldsFilled2() {
+    let name = document.querySelector('input[type="text"]').value;
+    let email = document.querySelector('input[type="email"]').value;
+    let password = document.querySelector('input[type="password"]').value;
+    return name.trim() !== "" && email.trim() !== "" && password.trim() !== "";
+}
+
+const clickBar = document.querySelector(".mobile-btn");
+const navHeader = document.querySelector(".header");
+clickBar.addEventListener("click", () => {
+    navHeader.classList.toggle("active");
 });
+
+let mobileBtn = document.getElementById("mobile-btn");
+let box = document.getElementById("box");
+mobileBtn.onclick = function () {
+    box.innerHTML = "";
+    box.style.background = "none";
+};

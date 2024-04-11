@@ -13,7 +13,7 @@ html,body{
 }
 
 .content{
-    background-image: url('https://github.com/avanimathur/Studentify/blob/5c2ab1a09ab7e922dd6ee1cf6be6014780ffdf59/img/back.jpg');
+    background-image: url('./img/back.jpg');
 }
 
 .header{
